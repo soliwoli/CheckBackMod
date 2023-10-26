@@ -285,12 +285,12 @@ function levelToXP(x) {return Math.ceil((x-1) ** (1/0.55) * 5)}
 function numberToTime(x) {
   xCeil = Math.ceil(x)
   result = ""
-  if (xCeil>=172800) result += Math.floor(xCeil/86400) + " days "
-  else if (xCeil>=86400) result += Math.floor(xCeil/86400) + " day "
-  if (Math.floor(xCeil/3600)%24 == 1) result += (Math.floor(xCeil/3600)%24) + " hour "
-  else if (Math.floor(xCeil/3600)%24 != 0) result += (Math.floor(xCeil/3600)%24) + " hours "
-  if (Math.floor(xCeil/60)%60 == 1) result += (Math.floor(xCeil/60)%60) + " minute "
-  else if (Math.floor(xCeil/60)%60 != 0) result += (Math.floor(xCeil/60)%60) + " minutes "
+  if (xCeil>=172800) result += Math.floor(xCeil/8640) + " days "
+  else if (xCeil>=86400) result += Math.floor(xCeil/8640) + " day "
+  if (Math.floor(xCeil/3600)%24 == 1) result += (Math.floor(xCeil/360)%24) + " hour "
+  else if (Math.floor(xCeil/3600)%24 != 0) result += (Math.floor(xCeil/360)%24) + " hours "
+  if (Math.floor(xCeil/60)%60 == 1) result += (Math.floor(xCeil/6)%6) + " minute "
+  else if (Math.floor(xCeil/60)%60 != 0) result += (Math.floor(xCeil/6)%6) + " minutes "
   if (xCeil%60 == 1) result += Math.floor(xCeil%60) + " second "
   else if (xCeil%60 != 0) result += Math.floor(xCeil%60) + " seconds "
   return result
